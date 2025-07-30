@@ -1,350 +1,74 @@
 {
-    "options": [
-      {
-        "code_id": "1111",
-        "title": "Variable Declaration",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "let x = 10;"
-          },
-          {
-            "label": "Spade",
-            "snippet": "const y = 20;"
-          },
-          {
-            "label": "Club",
-            "snippet": "var z = 30;"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(x, y, z);"
-          }
-        ]
-      },
-      {
-        "code_id": "2222",
-        "title": "Array Declaration",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "let arr = [1, 2, 3];"
-          },
-          {
-            "label": "Spade",
-            "snippet": "arr.push(4);"
-          },
-          {
-            "label": "Club",
-            "snippet": "arr[0] = 10;"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(arr);"
-          }
-        ]
-      },
-      {
-        "code_id": "3333",
-        "title": "Object Creation",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "let obj = { name: \"Alice\" };"
-          },
-          {
-            "label": "Spade",
-            "snippet": "obj.age = 25;"
-          },
-          {
-            "label": "Club",
-            "snippet": "obj.greet = function() { console.log(\"Hello\"); };"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "obj.greet();"
-          }
-        ]
-      },
-      {
-        "code_id": "4444",
-        "title": "Function Declaration",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "function add(a, b) {"
-          },
-          {
-            "label": "Club",
-            "snippet": "if (a > 0 && b > 0) {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "return a + b;"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(add(2, 3));"
-          }
-        ]
-      },
-      {
-        "code_id": "5555",
-        "title": "Function Definition",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "function multiply(a, b) {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "const result = a * b;"
-          },
-          {
-            "label": "Club",
-            "snippet": "return result;"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(multiply(2, 3));"
-          }
-        ]
-      },
-      {
-        "code_id": "6666",
-        "title": "Function Call",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "function greet() {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "console.log(\"Hello\");"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "greet();"
-          },
-          {
-            "label": "Club",
-            "snippet": "function greetWithArgs(name) {"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(\"Hello \" + name);"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "greetWithArgs(\"Alice\");"
-          }
-        ]
-      },
-      {
-        "code_id": "7777",
-        "title": "For Loop",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "for (let i = 0; i < 3; i++) {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "console.log(i);"
-          },
-          {
-            "label": "Club",
-            "snippet": "}"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(\"Loop finished\");"
-          }
-        ]
-      },
-      {
-        "code_id": "8888",
-        "title": "While Loop",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "let i = 0;"
-          },
-          {
-            "label": "Spade",
-            "snippet": "while (i < 3) {"
-          },
-          {
-            "label": "Club",
-            "snippet": "console.log(i);"
-          },
-          {
-            "label": "Club",
-            "snippet": "i++;"
-          },
-          {
-            "label": "Club",
-            "snippet": "}"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(\"Loop finished\");"
-          }
-        ]
-      },
-      {
-        "code_id": "9999",
-        "title": "If Statement",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "let age = 18;"
-          },
-          {
-            "label": "Spade",
-            "snippet": "if (age >= 18) {"
-          },
-          {
-            "label": "Club",
-            "snippet": "console.log(\"You are an adult.\");"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(\"You are a minor.\");"
-          }
-        ]
-      },
-      {
-        "code_id": "10101010",
-        "title": "Callback Function",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "function processData(data, callback) {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "callback(data);"
-          },
-          {
-            "label": "Club",
-            "snippet": "}"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "processData(\"Hello\", function(result) {"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(result);"
-          }
-        ]
-      },
-      {
-        "code_id": "jackjackjackjack",
-        "title": "Basic Input/Output",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "const readline = require(\"readline-sync\");"
-          },
-          {
-            "label": "Spade",
-            "snippet": "let name = readline.question(\"What is your name? \");"
-          },
-          {
-            "label": "Club",
-            "snippet": "console.log(\"Hello, \" + name + \"!\");"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(\"Welcome to the lab!\");"
-          }
-        ]
-      },
-      {
-        "code_id": "queenqueenqueenqueen",
-        "title": "Array Methods",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "let numbers = [1, 2, 3, 4, 5];"
-          },
-          {
-            "label": "Spade",
-            "snippet": "let doubled = numbers.map(num => num * 2);"
-          },
-          {
-            "label": "Club",
-            "snippet": "let filtered = numbers.filter(num => num > 2);"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(\"Doubled:\", doubled, \"Filtered:\", filtered);"
-          }
-        ]
-      },
-      {
-        "code_id": "KingKingkingking",
-        "title": "Error Handling",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "try {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "throw new Error(\"Something went wrong\");"
-          },
-          {
-            "label": "Club",
-            "snippet": "catch (err) {"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.error(\"Error:\", err.message);"
-          }
-        ]
-      },
-      {
-        "code_id": "jokerjokerjokerjoker",
-        "title": "Closures",
-        "code": [
-          {
-            "label": "Heart",
-            "snippet": "function outerFunction() {"
-          },
-          {
-            "label": "Spade",
-            "snippet": "let outerVariable = \"I am from the outer scope\";"
-          },
-          {
-            "label": "Club",
-            "snippet": "function innerFunction() {"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "console.log(outerVariable);"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "return innerFunction;"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "const closureExample = outerFunction();"
-          },
-          {
-            "label": "Diamond",
-            "snippet": "closureExample();"
-          }
-        ]
-      }
-    ],
-    "ranking": {
-      "Hearts": "Declarations",
-      "Spades": "Definitions",
-      "Clubs": "Control structures",
-      "Diamonds": "Calls/Usage"
+  "cards": [
+    {
+      "suit": "Spades",
+      "rank": "Ace",
+      "card": "Ace of Spades",
+      "concept": "Block-Scoped Variable",
+      "snippet": "let name = 'Jules';"
+    },
+    {
+      "suit": "Spades",
+      "rank": "King",
+      "card": "King of Spades",
+      "concept": "Immutable Variable",
+      "snippet": "const framework = 'React';"
+    },
+    {
+      "suit": "Spades",
+      "rank": "Queen",
+      "card": "Queen of Spades",
+      "concept": "Key-Value Data Structure (Object)",
+      "snippet": "const person = {\n  name: 'John Doe',\n  age: 30\n};"
+    },
+    {
+      "suit": "Spades",
+      "rank": "Jack",
+      "card": "Jack of Spades",
+      "concept": "Ordered List (Array)",
+      "snippet": "const numbers = [1, 2, 3, 4, 5];"
+    },
+    {
+      "suit": "Hearts",
+      "rank": "Ace",
+      "card": "Ace of Hearts",
+      "concept": "Named Function",
+      "snippet": "function greet(name) {\n  return `Hello, ${name}!`;\n}"
+    },
+    {
+      "suit": "Hearts",
+      "rank": "King",
+      "card": "King of Hearts",
+      "concept": "Arrow Function Expression",
+      "snippet": "const add = (a, b) => a + b;"
+    },
+    {
+      "suit": "Clubs",
+      "rank": "Ace",
+      "card": "Ace of Clubs",
+      "concept": "Conditional Branching",
+      "snippet": "if (score > 50) {\n  console.log('You pass!');\n} else {\n  console.log('You fail.');\n}"
+    },
+    {
+      "suit": "Clubs",
+      "rank": "King",
+      "card": "King of Clubs",
+      "concept": "Iterating Over a Collection",
+      "snippet": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}"
+    },
+    {
+      "suit": "Diamonds",
+      "rank": "Ace",
+      "card": "Ace of Diamonds",
+      "concept": "Transforming Data with .map()",
+      "snippet": "const numbers = [1, 2, 3];\nconst doubled = numbers.map(n => n * 2);"
+    },
+    {
+      "suit": "Diamonds",
+      "rank": "King",
+      "card": "King of Diamonds",
+      "concept": "Filtering Data with .filter()",
+      "snippet": "const numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(n => n % 2 === 0);"
     }
-  }
+  ]
+}
