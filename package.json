@@ -1,7 +1,16 @@
 {
-  "type": "module",
+  "name": "pokerjs-web",
+  "version": "1.0.0",
+  "description": "JavaScript Poker Cards — Web app (Express + EJS)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
   "dependencies": {
-    "chalk": "^5.4.1",
-    "readline-sync": "^1.4.10"
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "gray-matter": "^4.0.3",
+    "marked": "^12.0.2"
   }
 }

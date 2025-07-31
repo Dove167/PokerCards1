@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PokerJS — Progress</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PokerJS — Progress</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/practice">Practice</a>
+      <a href="/random-lesson">Random Lesson</a>
+      <a href="/browse">Browse</a>
+      <a href="/progress" class="active">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stats">
+      <ul>
+        <li>Seen: <strong><%= stats.seen %></strong> / <%= stats.totalCards %></li>
+        <li>Streak: <strong><%= stats.streak %></strong> (Best <%= stats.best %>)</li>
+        <li>Accuracy: <strong><%= stats.acc %></strong>% (<%= stats.correct %>/<%= stats.total %>)</li>
+      </ul>
+      <form method="POST" action="/progress/reset" onsubmit="return confirm('Reset all progress?');">
+        <button class="btn danger" type="submit">Reset Progress</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PokerJS — Reveal</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PokerJS — Reveal</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/practice" class="active">Practice</a>
+      <a href="/random-lesson">Random Lesson</a>
+      <a href="/browse">Browse</a>
+      <a href="/progress">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card-panel">
+      <div class="card-flip">
+        <div class="card-flip-inner">
+          <!-- FRONT -->
+          <div class="playing-card <%= (card.card || '').toLowerCase().includes('hearts') || (card.card || '').toLowerCase().includes('diamonds') ? 'red' : 'black' %>">
+            <div class="corner tl">
+              <div class="rank"><%= (card.card || '').split(' ')[0] %></div>
+              <div class="suit"><%= (card.card || '').split(' ')[1] || '' %></div>
+            </div>
+            <div class="corner br">
+              <div class="rank"><%= (card.card || '').split(' ')[0] %></div>
+              <div class="suit"><%= (card.card || '').split(' ')[1] || '' %></div>
+            </div>
+            <div class="pips pips-grid">
+              <%
+                const suit = (card.card || '').toLowerCase().includes('hearts') ? 'hearts' :
+                             (card.card || '').toLowerCase().includes('diamonds') ? 'diamonds' :
+                             (card.card || '').toLowerCase().includes('clubs') ? 'clubs' : 'spades';
+                const pipClass = (suit === 'hearts' || suit === 'diamonds') ? 'pip red' : 'pip black';
+                const rank = (card.card || '').split(' ')[0].toLowerCase();
+                const pipSymbol = suit === 'hearts' ? '♥' : suit === 'diamonds' ? '♦' : suit === 'clubs' ? '♣' : '♠';
+                const pipCountMap = { 'ace': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10 };
+                const count = pipCountMap[rank] || 1;
+              %>
+              <% for (let i = 0; i < count; i++) { %>
+                <div class="<%= pipClass %>"><%= pipSymbol %></div>
+              <% } %>
+              <div class="center-label"><%= card.concept %></div>
+            </div>
+          </div>
+          <!-- BACK -->
+          <div class="playing-card back">
+            <pre class="card-back-ascii"><code>
+   _____________
+  /             \
+ /  P O K E R   \
+|   ┌─────────┐  |
+|   │ ♥ ♦ ♣ ♠ │  |
+|   │ POKERJS │  |
+|   │ ♥ ♦ ♣ ♠ │  |
+|   └─────────┘  |
+ \               /
+  \_____________/
+            </code></pre>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:16px;"><%= card.card %></h2>
+      <div class="concept">Concept: <strong><%= card.concept %></strong></div>
+      <% if (card.topic) { %>
+        <div class="topic">Topic: <%= card.topic %></div>
+      <% } %>
+
+      <h3>Code (object)</h3>
+      <pre><code><%- JSON.stringify(codeObject || { title: card.card + ' — ' + card.concept, snippet: card.snippet, tip: 'Focus on: ' + (card.topic || 'concept') }, null, 2) %></code></pre>
+
+      <h3>Snippet</h3>
+      <pre><code><%- card.snippet %></code></pre>
+
+      <div class="actions-row">
+        <% if (card.lessonPath) { %>
+          <a class="btn" href="/card/<%= (card.lessonPath.split('/').pop() || '').replace('.md','') %>">Open Lesson</a>
+        <% } %>
+        <a class="btn" href="/practice">Next</a>
+      </div>
+
+      <form class="grade-form" method="POST" action="/practice/grade">
+        <button class="btn success" name="correct" value="yes" type="submit">I was correct</button>
+        <button class="btn danger" name="correct" value="no" type="submit">I missed it</button>
+      </form>
+    </section>
+
+    <section class="stats">
+      <h3>Stats</h3>
+      <ul>
+        <li>Seen: <%= stats.seenCount %></li>
+        <li>Streak: <%= stats.streak %> (Best <%= stats.bestStreak %>)</li>
+        <li>Accuracy: <%= stats.acc %>% (<%= stats.correct %>/<%= stats.total %>)</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

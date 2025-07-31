@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PokerJS — Lesson</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PokerJS — Lesson</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/practice">Practice</a>
+      <a href="/random-lesson" class="active">Random Lesson</a>
+      <a href="/browse">Browse</a>
+      <a href="/progress">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="lesson">
+      <h2><%= card.card %> — <%= card.concept %></h2>
+      <% if (lessonPath) { %>
+        <div class="meta">Source: <code><%= lessonPath %></code></div>
+      <% } %>
+      <hr />
+      <% if (html) { %>
+        <div class="markdown"><%- html %></div>
+      <% } else { %>
+        <p>No lesson content found.</p>
+      <% } %>
+    </article>
+    <div class="actions-row">
+      <a class="btn" href="/random-lesson">Another Random Lesson</a>
+      <a class="btn" href="/browse">Browse</a>
+    </div>
+  </main>
+</body>
+</html>

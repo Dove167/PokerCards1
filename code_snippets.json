@@ -1,74 +1,59 @@
 {
   "cards": [
-    {
-      "suit": "Spades",
-      "rank": "Ace",
-      "card": "Ace of Spades",
-      "concept": "Block-Scoped Variable",
-      "snippet": "let name = 'Jules';"
-    },
-    {
-      "suit": "Spades",
-      "rank": "King",
-      "card": "King of Spades",
-      "concept": "Immutable Variable",
-      "snippet": "const framework = 'React';"
-    },
-    {
-      "suit": "Spades",
-      "rank": "Queen",
-      "card": "Queen of Spades",
-      "concept": "Key-Value Data Structure (Object)",
-      "snippet": "const person = {\n  name: 'John Doe',\n  age: 30\n};"
-    },
-    {
-      "suit": "Spades",
-      "rank": "Jack",
-      "card": "Jack of Spades",
-      "concept": "Ordered List (Array)",
-      "snippet": "const numbers = [1, 2, 3, 4, 5];"
-    },
-    {
-      "suit": "Hearts",
-      "rank": "Ace",
-      "card": "Ace of Hearts",
-      "concept": "Named Function",
-      "snippet": "function greet(name) {\n  return `Hello, ${name}!`;\n}"
-    },
-    {
-      "suit": "Hearts",
-      "rank": "King",
-      "card": "King of Hearts",
-      "concept": "Arrow Function Expression",
-      "snippet": "const add = (a, b) => a + b;"
-    },
-    {
-      "suit": "Clubs",
-      "rank": "Ace",
-      "card": "Ace of Clubs",
-      "concept": "Conditional Branching",
-      "snippet": "if (score > 50) {\n  console.log('You pass!');\n} else {\n  console.log('You fail.');\n}"
-    },
-    {
-      "suit": "Clubs",
-      "rank": "King",
-      "card": "King of Clubs",
-      "concept": "Iterating Over a Collection",
-      "snippet": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}"
-    },
-    {
-      "suit": "Diamonds",
-      "rank": "Ace",
-      "card": "Ace of Diamonds",
-      "concept": "Transforming Data with .map()",
-      "snippet": "const numbers = [1, 2, 3];\nconst doubled = numbers.map(n => n * 2);"
-    },
-    {
-      "suit": "Diamonds",
-      "rank": "King",
-      "card": "King of Diamonds",
-      "concept": "Filtering Data with .filter()",
-      "snippet": "const numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(n => n % 2 === 0);"
-    }
+    { "suit": "Spades", "rank": "Ace", "card": "Ace of Spades", "topic": "Basic Synchronous", "concept": "Block-Scoped Variable (let)", "snippet": "let count = 0;", "lessonPath": "deckofcards/01-ace-spades.md" },
+    { "suit": "Spades", "rank": "2", "card": "2 of Spades", "topic": "Array Processing", "concept": "Create and Access Arrays", "snippet": "const arr = [1,2,3];\nconsole.log(arr[0]);", "lessonPath": "deckofcards/02-two-spades.md" },
+    { "suit": "Spades", "rank": "3", "card": "3 of Spades", "topic": "Promise Chains", "concept": "Basic Promise and then()", "snippet": "Promise.resolve(1).then(v => v + 1);", "lessonPath": "deckofcards/03-three-spades.md" },
+    { "suit": "Spades", "rank": "4", "card": "4 of Spades", "topic": "File System", "concept": "fs.readFileSync()", "snippet": "import fs from 'fs';\nconst txt = fs.readFileSync('file.txt','utf8');", "lessonPath": "deckofcards/04-four-spades.md" },
+    { "suit": "Spades", "rank": "5", "card": "5 of Spades", "topic": "Functional Programming", "concept": "Pure Functions", "snippet": "const add = (a,b) => a + b;", "lessonPath": "deckofcards/05-five-spades.md" },
+    { "suit": "Spades", "rank": "6", "card": "6 of Spades", "topic": "Advanced Async", "concept": "async/await Basics", "snippet": "async function f(){ return await Promise.resolve(42); }", "lessonPath": "deckofcards/06-six-spades.md" },
+    { "suit": "Spades", "rank": "7", "card": "7 of Spades", "topic": "Callbacks", "concept": "Callback Pattern", "snippet": "function doWork(cb){ setTimeout(()=>cb(null,'ok'),100); }", "lessonPath": "deckofcards/07-seven-spades.md" },
+    { "suit": "Spades", "rank": "8", "card": "8 of Spades", "topic": "Promise Utilities", "concept": "Promise.all()", "snippet": "await Promise.all([p1,p2]);", "lessonPath": "deckofcards/08-eight-spades.md" },
+    { "suit": "Spades", "rank": "9", "card": "9 of Spades", "topic": "Basic Synchronous", "concept": "const (Immutable Binding)", "snippet": "const API_URL = 'https://api.example.com';", "lessonPath": "deckofcards/09-nine-spades.md" },
+    { "suit": "Spades", "rank": "10", "card": "10 of Spades", "topic": "Array Processing", "concept": "Array.map()", "snippet": "const doubled = [1,2,3].map(n=>n*2);", "lessonPath": "deckofcards/10-ten-spades.md" },
+    { "suit": "Spades", "rank": "Jack", "card": "Jack of Spades", "topic": "Promise Chains", "concept": "Chaining then() and catch()", "snippet": "fetch(url).then(r=>r.json()).catch(console.error);", "lessonPath": "deckofcards/11-jack-spades.md" },
+    { "suit": "Spades", "rank": "Queen", "card": "Queen of Spades", "topic": "File System", "concept": "fs.writeFileSync()", "snippet": "import fs from 'fs';\nfs.writeFileSync('out.txt','hello');", "lessonPath": "deckofcards/12-queen-spades.md" },
+    { "suit": "Spades", "rank": "King", "card": "King of Spades", "topic": "Functional Programming", "concept": "Immutability (Shallow Clone)", "snippet": "const next = {...state, count: state.count+1};", "lessonPath": "deckofcards/13-king-spades.md" },
+
+    { "suit": "Hearts", "rank": "Ace", "card": "Ace of Hearts", "topic": "Advanced Async", "concept": "Try/Catch with async/await", "snippet": "try { await task(); } catch (e) { console.error(e); }", "lessonPath": "deckofcards/14-ace-hearts.md" },
+    { "suit": "Hearts", "rank": "2", "card": "2 of Hearts", "topic": "Callbacks", "concept": "Node-style Error-first Callback", "snippet": "fs.readFile('a.txt','utf8',(err,data)=>{ if(err) return; console.log(data); });", "lessonPath": "deckofcards/15-two-hearts.md" },
+    { "suit": "Hearts", "rank": "3", "card": "3 of Hearts", "topic": "Promise Utilities", "concept": "Promise.race()", "snippet": "await Promise.race([p1,p2]);", "lessonPath": "deckofcards/16-three-hearts.md" },
+    { "suit": "Hearts", "rank": "4", "card": "4 of Hearts", "topic": "Basic Synchronous", "concept": "Template Literals", "snippet": "const msg = `Hello ${name}!`;", "lessonPath": "deckofcards/17-four-hearts.md" },
+    { "suit": "Hearts", "rank": "5", "card": "5 of Hearts", "topic": "Array Processing", "concept": "Array.filter()", "snippet": "const evens = [1,2,3,4].filter(n => n%2===0);", "lessonPath": "deckofcards/18-five-hearts.md" },
+    { "suit": "Hearts", "rank": "6", "card": "6 of Hearts", "topic": "Promise Chains", "concept": "finally()", "snippet": "doThing().finally(()=>console.log('done'));", "lessonPath": "deckofcards/19-six-hearts.md" },
+    { "suit": "Hearts", "rank": "7", "card": "7 of Hearts", "topic": "File System", "concept": "fs.promises.readFile()", "snippet": "import {promises as fs} from 'fs';\nconst txt = await fs.readFile('a.txt','utf8');", "lessonPath": "deckofcards/20-seven-hearts.md" },
+    { "suit": "Hearts", "rank": "8", "card": "8 of Hearts", "topic": "Functional Programming", "concept": "Higher-Order Functions", "snippet": "const withLog = fn => (...a)=>{ console.log('call'); return fn(...a); };", "lessonPath": "deckofcards/21-eight-hearts.md" },
+    { "suit": "Hearts", "rank": "9", "card": "9 of Hearts", "topic": "Advanced Async", "concept": "Parallel vs Sequential await", "snippet": "const [a,b]=await Promise.all([fa(), fb()]);", "lessonPath": "deckofcards/22-nine-hearts.md" },
+    { "suit": "Hearts", "rank": "10", "card": "10 of Hearts", "topic": "Callbacks", "concept": "setTimeout / setInterval", "snippet": "const id=setInterval(()=>console.log('tick'),1000);", "lessonPath": "deckofcards/23-ten-hearts.md" },
+    { "suit": "Hearts", "rank": "Jack", "card": "Jack of Hearts", "topic": "Promise Utilities", "concept": "Promise.allSettled()", "snippet": "const r=await Promise.allSettled([p1,p2]);", "lessonPath": "deckofcards/24-jack-hearts.md" },
+    { "suit": "Hearts", "rank": "Queen", "card": "Queen of Hearts", "topic": "Basic Synchronous", "concept": "Object Literals", "snippet": "const user = { id: 1, name: 'Ada' };", "lessonPath": "deckofcards/25-queen-hearts.md" },
+    { "suit": "Hearts", "rank": "King", "card": "King of Hearts", "topic": "Array Processing", "concept": "Array.reduce()", "snippet": "const sum = [1,2,3].reduce((a,b)=>a+b,0);", "lessonPath": "deckofcards/26-king-hearts.md" },
+
+    { "suit": "Clubs", "rank": "Ace", "card": "Ace of Clubs", "topic": "Promise Chains", "concept": "Error Propagation in Chains", "snippet": "return step1().then(step2).catch(handleErr);", "lessonPath": "deckofcards/27-ace-clubs.md" },
+    { "suit": "Clubs", "rank": "2", "card": "2 of Clubs", "topic": "File System", "concept": "fs.existsSync / statSync", "snippet": "import fs from 'fs';\nif(fs.existsSync('a.txt')){ const s=fs.statSync('a.txt'); }", "lessonPath": "deckofcards/28-two-clubs.md" },
+    { "suit": "Clubs", "rank": "3", "card": "3 of Clubs", "topic": "Functional Programming", "concept": "Currying", "snippet": "const add = a => b => a + b;", "lessonPath": "deckofcards/29-three-clubs.md" },
+    { "suit": "Clubs", "rank": "4", "card": "4 of Clubs", "topic": "Advanced Async", "concept": "AbortController with fetch", "snippet": "const c=new AbortController();\nfetch(url,{signal:c.signal});\nc.abort();", "lessonPath": "deckofcards/30-four-clubs.md" },
+    { "suit": "Clubs", "rank": "5", "card": "5 of Clubs", "topic": "Callbacks", "concept": "Callback to Promise (Promisify)", "snippet": "const p = new Promise((res,rej)=> fs.readFile('a.txt','utf8',(e,d)=> e?rej(e):res(d)));", "lessonPath": "deckofcards/31-five-clubs.md" },
+    { "suit": "Clubs", "rank": "6", "card": "6 of Clubs", "topic": "Promise Utilities", "concept": "Promise.any()", "snippet": "const first = await Promise.any([p1,p2,p3]);", "lessonPath": "deckofcards/32-six-clubs.md" },
+    { "suit": "Clubs", "rank": "7", "card": "7 of Clubs", "topic": "Basic Synchronous", "concept": "Destructuring", "snippet": "const {a,b} = obj; const [x,y] = arr;", "lessonPath": "deckofcards/33-seven-clubs.md" },
+    { "suit": "Clubs", "rank": "8", "card": "8 of Clubs", "topic": "Array Processing", "concept": "Array.find / some / every", "snippet": "const hit = arr.find(x=>x.id===7);", "lessonPath": "deckofcards/34-eight-clubs.md" },
+    { "suit": "Clubs", "rank": "9", "card": "9 of Clubs", "topic": "Promise Chains", "concept": "Return vs Missing Return", "snippet": "return doWork().then(v=>v*2);", "lessonPath": "deckofcards/35-nine-clubs.md" },
+    { "suit": "Clubs", "rank": "10", "card": "10 of Clubs", "topic": "File System", "concept": "Streams (createReadStream)", "snippet": "const s=fs.createReadStream('big.txt');\ns.on('data',chunk=>{});", "lessonPath": "deckofcards/36-ten-clubs.md" },
+    { "suit": "Clubs", "rank": "Jack", "card": "Jack of Clubs", "topic": "Functional Programming", "concept": "Composition", "snippet": "const compose=(f,g)=>x=>f(g(x));", "lessonPath": "deckofcards/37-jack-clubs.md" },
+    { "suit": "Clubs", "rank": "Queen", "card": "Queen of Clubs", "topic": "Advanced Async", "concept": "Queueing and Backpressure (conceptual)", "snippet": "const queue=[]; async function enqueue(t){ queue.push(t); }", "lessonPath": "deckofcards/38-queen-clubs.md" },
+    { "suit": "Clubs", "rank": "King", "card": "King of Clubs", "topic": "Callbacks", "concept": "EventEmitter Style Callbacks", "snippet": "import {EventEmitter} from 'events';\nconst bus=new EventEmitter();\nbus.on('msg',d=>console.log(d));", "lessonPath": "deckofcards/39-king-clubs.md" },
+
+    { "suit": "Diamonds", "rank": "Ace", "card": "Ace of Diamonds", "topic": "Promise Utilities", "concept": "Settled vs Fulfilled", "snippet": "const r = await Promise.allSettled([p1,p2]);", "lessonPath": "deckofcards/40-ace-diamonds.md" },
+    { "suit": "Diamonds", "rank": "2", "card": "2 of Diamonds", "topic": "Basic Synchronous", "concept": "Spread and Rest", "snippet": "const next=[...arr, 4];\nfunction sum(...xs){ return xs.reduce((a,b)=>a+b,0); }", "lessonPath": "deckofcards/41-two-diamonds.md" },
+    { "suit": "Diamonds", "rank": "3", "card": "3 of Diamonds", "topic": "Array Processing", "concept": "Array.flat / flatMap", "snippet": "const out = [[1],[2,3]].flat();", "lessonPath": "deckofcards/42-three-diamonds.md" },
+    { "suit": "Diamonds", "rank": "4", "card": "4 of Diamonds", "topic": "Promise Chains", "concept": "thenable vs Promise", "snippet": "const thenable={ then(r){ r(1); } };\nPromise.resolve(thenable);", "lessonPath": "deckofcards/43-four-diamonds.md" },
+    { "suit": "Diamonds", "rank": "5", "card": "5 of Diamonds", "topic": "File System", "concept": "fs.mkdir / rm (recursive)", "snippet": "fs.mkdirSync('tmp',{recursive:true});\nfs.rmSync('tmp',{recursive:true,force:true});", "lessonPath": "deckofcards/44-five-diamonds.md" },
+    { "suit": "Diamonds", "rank": "6", "card": "6 of Diamonds", "topic": "Functional Programming", "concept": "Point-free Style", "snippet": "const incAll = arr => arr.map(x=>x+1);", "lessonPath": "deckofcards/45-six-diamonds.md" },
+    { "suit": "Diamonds", "rank": "7", "card": "7 of Diamonds", "topic": "Advanced Async", "concept": "Concurrency Limits", "snippet": "const pool = (tasks, n)=>{/* limit parallelism concept */};", "lessonPath": "deckofcards/46-seven-diamonds.md" },
+    { "suit": "Diamonds", "rank": "8", "card": "8 of Diamonds", "topic": "Callbacks", "concept": "Callback Hell and Refactor", "snippet": "a(x=> b(y=> c(z=> done())))", "lessonPath": "deckofcards/47-eight-diamonds.md" },
+    { "suit": "Diamonds", "rank": "9", "card": "9 of Diamonds", "topic": "Promise Utilities", "concept": "Promise.withResolvers (polyfill idea)", "snippet": "function withResolvers(){ let r,j; const p=new Promise((res,rej)=>{r=res;j=rej;}); return {p, resolve:r, reject:j}; }", "lessonPath": "deckofcards/48-nine-diamonds.md" },
+    { "suit": "Diamonds", "rank": "10", "card": "10 of Diamonds", "topic": "Basic Synchronous", "concept": "Modules (import/export)", "snippet": "export const X=1; // in a.js\n// import {X} from './a.js'", "lessonPath": "deckofcards/49-ten-diamonds.md" },
+    { "suit": "Diamonds", "rank": "Jack", "card": "Jack of Diamonds", "topic": "Array Processing", "concept": "for...of and entries()", "snippet": "for (const [i,v] of arr.entries()) { /* ... */ }", "lessonPath": "deckofcards/50-jack-diamonds.md" },
+    { "suit": "Diamonds", "rank": "Queen", "card": "Queen of Diamonds", "topic": "Promise Chains", "concept": "Microtask Timing", "snippet": "Promise.resolve().then(()=>console.log('microtask'));", "lessonPath": "deckofcards/51-queen-diamonds.md" },
+    { "suit": "Diamonds", "rank": "King", "card": "King of Diamonds", "topic": "File System", "concept": "path + fs (join, resolve)", "snippet": "import path from 'path';\nconst p=path.join('a','b','c.txt');", "lessonPath": "deckofcards/52-king-diamonds.md" }
   ]
 }

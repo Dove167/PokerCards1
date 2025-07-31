@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PokerJS — Practice</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PokerJS — Practice</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/practice" class="active">Practice</a>
+      <a href="/random-lesson">Random Lesson</a>
+      <a href="/browse">Browse</a>
+      <a href="/progress">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card-panel">
+      <h2>Card</h2>
+
+      <!-- Flip card preview (front/back) matching reveal visual -->
+      <div class="card-flip" style="margin-bottom:12px;">
+        <div class="card-flip-inner">
+          <!-- FRONT -->
+          <div class="playing-card <%= (card.card || '').toLowerCase().includes('hearts') || (card.card || '').toLowerCase().includes('diamonds') ? 'red' : 'black' %>">
+            <div class="corner tl">
+              <div class="rank"><%= (card.card || '').split(' ')[0] %></div>
+              <div class="suit"><%= (card.card || '').split(' ')[1] || '' %></div>
+            </div>
+            <div class="corner br">
+              <div class="rank"><%= (card.card || '').split(' ')[0] %></div>
+              <div class="suit"><%= (card.card || '').split(' ')[1] || '' %></div>
+            </div>
+            <div class="pips pips-grid">
+              <%
+                const suit = (card.card || '').toLowerCase().includes('hearts') ? 'hearts' :
+                             (card.card || '').toLowerCase().includes('diamonds') ? 'diamonds' :
+                             (card.card || '').toLowerCase().includes('clubs') ? 'clubs' : 'spades';
+                const pipClass = (suit === 'hearts' || suit === 'diamonds') ? 'pip red' : 'pip black';
+                const rank = (card.card || '').split(' ')[0].toLowerCase();
+                const pipSymbol = suit === 'hearts' ? '♥' : suit === 'diamonds' ? '♦' : suit === 'clubs' ? '♣' : '♠';
+                const pipCountMap = { 'ace': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10 };
+                const count = pipCountMap[rank] || 1;
+              %>
+              <% for (let i = 0; i < count; i++) { %>
+                <div class="<%= pipClass %>"><%= pipSymbol %></div>
+              <% } %>
+              <div class="center-label">Think first… then Reveal</div>
+            </div>
+          </div>
+          <!-- BACK -->
+          <div class="playing-card back">
+            <pre class="card-back-ascii"><code>
+   _____________
+  /             \
+ /  P O K E R   \
+|   ┌─────────┐  |
+|   │ ♥ ♦ ♣ ♠ │  |
+|   │ POKERJS │  |
+|   │ ♥ ♦ ♣ ♠ │  |
+|   └─────────┘  |
+ \               /
+  \_____________/
+            </code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explicit form; no accidental navigation -->
+      <form method="POST" action="/practice/reveal">
+        <input type="hidden" name="card" value='<%- JSON.stringify({ card: card.card, concept: card.concept, topic: card.topic, snippet: card.snippet, lessonPath: card.lessonPath }) %>' />
+        <button class="btn" type="submit">Reveal</button>
+        <a class="btn" href="/practice" style="margin-left:8px;">Next</a>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

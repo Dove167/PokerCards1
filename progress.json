@@ -1,0 +1,12 @@
+{
+  "seen": [
+    "Jack of Clubs",
+    "7 of Clubs",
+    "Ace of Hearts",
+    "3 of Spades"
+  ],
+  "correct": 3,
+  "total": 4,
+  "streak": 3,
+  "bestStreak": 3
+}
